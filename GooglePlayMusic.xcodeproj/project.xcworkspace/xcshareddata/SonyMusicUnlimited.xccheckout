@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>892CA8ED-E8D6-4AA0-86D8-FACD384A9787</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SonyMusicUnlimited</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C14587519D1591BA11274FE54CFA62AC58AB7355</key>
+		<string>https://github.com/jblaker/SMUNativeAppWrapper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SonyMusicUnlimited.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C14587519D1591BA11274FE54CFA62AC58AB7355</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jblaker/SMUNativeAppWrapper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C14587519D1591BA11274FE54CFA62AC58AB7355</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C14587519D1591BA11274FE54CFA62AC58AB7355</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SMUNativeAppWrapper</string>
+		</dict>
+	</array>
+</dict>
+</plist>
