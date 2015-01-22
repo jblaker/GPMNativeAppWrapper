@@ -85,7 +85,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <webView translatesAutoresizingMaskIntoConstraints="NO" id="536">
-                        <rect key="frame" x="0.0" y="0.0" width="1053" height="1060"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1053" height="1000"/>
                         <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
                             <nil key="identifier"/>
                         </webPreferences>
@@ -96,7 +96,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="536" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="ay4-bC-Zwz"/>
-                    <constraint firstItem="536" firstAttribute="top" secondItem="372" secondAttribute="top" constant="-60" id="c0K-sy-xIS"/>
+                    <constraint firstItem="536" firstAttribute="top" secondItem="372" secondAttribute="top" id="c0K-sy-xIS"/>
                     <constraint firstAttribute="trailing" secondItem="536" secondAttribute="trailing" id="e5Q-Bp-RBZ"/>
                     <constraint firstAttribute="bottom" secondItem="536" secondAttribute="bottom" id="j9y-51-TJE"/>
                 </constraints>
@@ -119,9 +119,5 @@
         </customObject>
         <customObject id="621" customClass="SMUManager"/>
         <customObject id="420" customClass="NSFontManager"/>
-        <toolbarItem implicitItemIdentifier="97090EAA-0A04-42C8-A0EF-26D0A5600BE8" label="Toolbar Item" paletteLabel="Toolbar Item" tag="-1" image="AppIcon" id="FhA-5v-eKb"/>
     </objects>
-    <resources>
-        <image name="AppIcon" width="128" height="128"/>
-    </resources>
 </document>
