@@ -73,11 +73,24 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="View" id="O5X-cH-PnV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="View" id="5cH-S0-Bw9">
+                        <items>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="9cX-L9-vzD">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleFullScreen:" target="-1" id="Bnb-Lu-DvX"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
             </items>
         </menu>
         <window title="Google Play Music" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowCollectionBehavior key="collectionBehavior" fullScreenAuxiliary="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="335" y="390" width="1053" height="1000"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="372">
@@ -117,7 +130,6 @@
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
-        <customObject id="621" customClass="SMUManager"/>
-        <customObject id="420" customClass="NSFontManager"/>
+        <customObject id="420" userLabel="NSFontManager" customClass="NSFontManager"/>
     </objects>
 </document>

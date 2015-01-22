@@ -66,7 +66,7 @@
 		3F22758F17C409D50051A177 = {
 			isa = PBXGroup;
 			children = (
-				3F2275A117C409D50051A177 /* SonyMusicUnlimited */,
+				3F2275A117C409D50051A177 /* GooglePlayMusic */,
 				3F22759A17C409D50051A177 /* Frameworks */,
 				3F22759917C409D50051A177 /* Products */,
 			);
@@ -101,7 +101,7 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		3F2275A117C409D50051A177 /* SonyMusicUnlimited */ = {
+		3F2275A117C409D50051A177 /* GooglePlayMusic */ = {
 			isa = PBXGroup;
 			children = (
 				E93056D11A705FAB0071A4A3 /* AppDelegate.h */,
@@ -114,6 +114,7 @@
 				3F47C3791808BD6A0042DD62 /* Images */,
 				3F2275A217C409D50051A177 /* Supporting Files */,
 			);
+			name = GooglePlayMusic;
 			path = SonyMusicUnlimited;
 			sourceTree = "<group>";
 		};
