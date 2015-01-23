@@ -123,12 +123,16 @@
             </connections>
         </customObject>
         <customObject id="420" userLabel="NSFontManager" customClass="NSFontManager"/>
-        <customObject id="szt-lM-aON" customClass="SharingManager"/>
+        <customObject id="szt-lM-aON" customClass="SharingManager">
+            <connections>
+                <outlet property="scrobbleShareMenuItem" destination="cQC-5p-M0e" id="okt-aY-Eov"/>
+            </connections>
+        </customObject>
         <window title="Google Play Music" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <rect key="contentRect" x="335" y="390" width="1053" height="1000"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="1053" height="1000"/>
                 <autoresizingMask key="autoresizingMask"/>

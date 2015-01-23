@@ -16,5 +16,7 @@
 - (IBAction)toggleScrobbling:(id)sender;
 
 + (instancetype)sharedManager;
++ (void)scrobbleNowPlayingTrack:(NSString *)trackName byArtist:(NSString *)artistName;
++ (void)scrobblePlayedTrack:(NSString *)trackName byArtist:(NSString *)artistName;
 
 @end
