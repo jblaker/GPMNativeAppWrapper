@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GPMManager.h"
 #import "AppleMediaKeyController.h"
+#import "SharingManager.h"
 
 NSString *const kURLToLoad = @"https://play.google.com/music/listen";
 
@@ -18,6 +19,7 @@ NSString *const kURLToLoad = @"https://play.google.com/music/listen";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification {
   
+  [SharingManager sharedManager];
   [self setupAppleMediaController];
 
   [webView setMainFrameURL:kURLToLoad];
@@ -56,6 +58,10 @@ NSString *const kURLToLoad = @"https://play.google.com/music/listen";
 
 - (void)applicationWillTerminate:(NSNotification *)notification {
   [[NSUserNotificationCenter defaultUserNotificationCenter] removeAllDeliveredNotifications];
+}
+
+- (void)applicationDidBecomeActive:(NSNotification *)notification {
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"ApplicationDidBecomeActive" object:nil];
 }
 
 #pragma mark - UI Actions

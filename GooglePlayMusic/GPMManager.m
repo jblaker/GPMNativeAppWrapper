@@ -10,12 +10,16 @@
 #import "AppDelegate.h"
 #import "NSString+HTML.h"
 #import <AppKit/AppKit.h>
+#import "SharingManager.h"
 
 NSString *const kApplicationName = @"Google Play Music";
 NSString *const kTrackTitleID = @"playerSongTitle";
 NSString *const kArtistID = @"player-artist";
 NSString *const kAlbumClass = @"player-album";
-NSString *const albumArtId = @"playingAlbumArt";
+NSString *const kAlbumArtId = @"playingAlbumArt";
+NSString *const kCurrentTimeId = @"time_container_current";
+NSString *const kDurationTimeId = @"time_container_duration";
+NSString *const kPlayPauseButtonId = @"play-pause";
 
 @interface GPMManager () {
   WebView *_webView;
@@ -28,14 +32,14 @@ NSString *const albumArtId = @"playingAlbumArt";
   NSMenuItem *_likeTrackMenuItem;
   NSMenuItem *_dislikeTrackMenuItem;
   NSMenuItem *_updateStatusMessageMenuItem;
-  NSStatusItem *_playbackToggleStatusItem;
-  NSStatusItem *_nextTrackStatusItem;
   NSMenu *_dockMenu;
-  BOOL _isPlaying;
   int _previousTimeStamp;
-  NSString *_trackName;
-  NSString *_artistName;
-  NSString *_albumName;
+  NSString *_currentTimeString;
+  NSString *_trackDurationString;
+  NSString *_lastAristName;
+  NSString *_lastTrackName;
+  NSString *_lastDurationString;
+  NSString *_lastCurrentTimeString;
 }
 
 @end
@@ -73,21 +77,8 @@ NSString *const albumArtId = @"playingAlbumArt";
   [self shouldEnableMenuItems:NO];
   
   [NSTimer scheduledTimerWithTimeInterval:1.01 target:self selector:@selector(displayNowPlaying) userInfo:nil repeats:YES];
+  [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(scrobbleNowPlaying) userInfo:nil repeats:YES];
   
-}
-
-- (void)buildStatusBarItems {
-  NSStatusBar *bar = [NSStatusBar systemStatusBar];
-  
-  _nextTrackStatusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-  [_nextTrackStatusItem setImage:[NSImage imageNamed:@"Icon_Skip"]];
-  [_nextTrackStatusItem setHighlightMode:YES];
-  [_nextTrackStatusItem setAction:@selector(nextTrackFromStatusBar:)];
-  
-  _playbackToggleStatusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-  [_playbackToggleStatusItem setImage:[NSImage imageNamed:@"Icon_Play"]];
-  [_playbackToggleStatusItem setHighlightMode:YES];
-  [_playbackToggleStatusItem setAction:@selector(togglePlaybackFromStatusBar:)];
 }
 
 // This delegate method gets triggered every time the page loads, but before the JavaScript runs
@@ -144,15 +135,22 @@ NSString *const albumArtId = @"playingAlbumArt";
   [_nextTrackMenuItem setEnabled:b];
   [_likeTrackMenuItem setEnabled:b];
   [_dislikeTrackMenuItem setEnabled:b];
-  [_playbackToggleStatusItem setEnabled:b];
-  [_nextTrackStatusItem setEnabled:b];
+}
+
+- (void)setupForNextTrack {
+  _lastAristName = _artistName ? _artistName : [self innerHTMLForElementWithID:kArtistID];
+  _lastTrackName = _trackName ? _trackName : [self innerHTMLForElementWithID:kTrackTitleID];
+  _lastCurrentTimeString = _currentTimeString ? _currentTimeString : [self innerHTMLForElementWithID:kCurrentTimeId];
+  _lastDurationString = _trackDurationString ? _trackDurationString : [self innerHTMLForElementWithID:kDurationTimeId];
+  [self scrobbleLastPlayed];
+  _previousTimeStamp = 0;
 }
 
 - (void)displayNowPlaying {
   
   NSString *currentTrackName = [self innerHTMLForElementWithID:kTrackTitleID];
-  if ( ![currentTrackName isEqualToString:_trackName] ) {
-    _previousTimeStamp = 0;
+  if (![currentTrackName isEqualToString:_trackName] ) {
+    [self setupForNextTrack];
   }
   _trackName = currentTrackName;
   _artistName = [self innerHTMLForElementWithID:kArtistID];
@@ -168,6 +166,7 @@ NSString *const albumArtId = @"playingAlbumArt";
   } else {
     if([self updateMenuItem:_trackNameMenuItem withTitle:[_trackName kv_decodeHTMLCharacterEntities]]){
       [self postNotification];
+      [self scrobbleNowPlaying];
     }
     [self updateMenuItem:_artistNameMenuItem withTitle:[_artistName kv_decodeHTMLCharacterEntities]];
     [self updateMenuItem:_nowPlayingMenuItem withTitle:@"Now Playing"];
@@ -178,8 +177,9 @@ NSString *const albumArtId = @"playingAlbumArt";
       _isPlaying = YES;
     }
     
-    NSString *currentTimeString = [self innerHTMLForElementWithID:@"time_container_current"];
-    int currentTimeStamp = [[currentTimeString stringByReplacingOccurrencesOfString:@":" withString:@""] intValue];
+    _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
+    _currentTimeString = [self innerHTMLForElementWithID:kCurrentTimeId];
+    int currentTimeStamp = [[_currentTimeString stringByReplacingOccurrencesOfString:@":" withString:@""] intValue];
     if ( currentTimeStamp > _previousTimeStamp ) {
       [self updateMenuItem:_playbackToggleMenuItem withTitle:@"Pause"];
     } else {
@@ -193,7 +193,7 @@ NSString *const albumArtId = @"playingAlbumArt";
 
 - (void)postNotification {
   
-  NSURL *imageURL = [NSURL URLWithString:[self attributeValueForAtribute:@"src" forElementWithID:albumArtId]];
+  NSURL *imageURL = [NSURL URLWithString:[self attributeValueForAtribute:@"src" forElementWithID:kAlbumArtId]];
   
   dispatch_queue_t notificationQueue = dispatch_queue_create("com.blakerdesign.notifications", NULL);
   
@@ -213,6 +213,50 @@ NSString *const albumArtId = @"playingAlbumArt";
       
     });
     
+  });
+  
+}
+
+- (void)scrobbleNowPlaying {
+  
+  if(_isPlaying) {
+    dispatch_queue_t scrobbleQueue = dispatch_queue_create("com.blakerdesign.scrobble", NULL);
+    
+    dispatch_async(scrobbleQueue, ^{
+      [SharingManager scrobbleNowPlayingTrack:_trackName byArtist:_artistName];
+    });
+  }
+  
+}
+
+- (void)scrobbleLastPlayed {
+  
+  if([_lastDurationString isEqualToString:@""] || [_lastCurrentTimeString isEqualToString:@""]) { return; }
+  
+  dispatch_queue_t scrobbleQueue = dispatch_queue_create("com.blakerdesign.scrobble", NULL);
+  
+  dispatch_async(scrobbleQueue, ^{
+    
+    // Is track longer than 30 seconds?
+    NSArray *currentTimeComponents = [_lastCurrentTimeString componentsSeparatedByString:@":"];
+    
+    if(currentTimeComponents == nil) { return; }
+    
+    // Multiply minutes by 60 to get total seconds of minutes and add to playedSeconds
+    int totalSecondsPlayed = ([currentTimeComponents[0] intValue] * 60) + [currentTimeComponents[1] intValue];
+    
+    if(totalSecondsPlayed < 30) { return; }
+    
+    // Did track play for more than half it's length
+    NSArray *durationComponents = [_lastDurationString componentsSeparatedByString:@":"];
+    int totalDurationSeconds = ([durationComponents[0] intValue] * 60) + [durationComponents[1] intValue];
+    
+    float percentageOfTrackPlayed = (float)totalSecondsPlayed / (float)totalDurationSeconds;
+    
+    if(percentageOfTrackPlayed >= 0.5) {
+      [SharingManager scrobblePlayedTrack:_lastTrackName byArtist:_lastAristName];
+    }
+      
   });
   
 }

@@ -11,6 +11,7 @@
 		3F2275B917C40A830051A177 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2275B817C40A830051A177 /* WebKit.framework */; };
 		3F47C3781808B9DE0042DD62 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F22759E17C409D50051A177 /* AppKit.framework */; };
 		3F8305BF17CE7A4000727D3A /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */; };
+		E90605031A7200B200F64C22 /* SharingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E90605021A7200B200F64C22 /* SharingManager.m */; };
 		E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */; };
 		E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CE1A705F990071A4A3 /* AppleMediaKeyController.m */; };
 		E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056D21A705FAB0071A4A3 /* AppDelegate.m */; };
@@ -20,9 +21,12 @@
 		E9641EE11A705D22000C680C /* Google-Play-Music-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9641EE01A705D22000C680C /* Google-Play-Music-icon.png */; };
 		E99A79041A70747A000A9383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E99A79021A70747A000A9383 /* InfoPlist.strings */; };
 		E99A79071A707481000A9383 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99A79051A707481000A9383 /* MainMenu.xib */; };
+		E9AB40771A72158F003EB7A2 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E9AB40761A72158F003EB7A2 /* Utilities.m */; };
+		FFBECA3C72E0496317073FDE /* libPods-GooglePlayMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE037CDE0D220187CEE96931 /* libPods-GooglePlayMusic.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18D04518FF128EEB92EB5568 /* Pods-GooglePlayMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlayMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		3F22759817C409D50051A177 /* GooglePlayMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlayMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F22759B17C409D50051A177 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3F22759E17C409D50051A177 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -31,6 +35,9 @@
 		3F2275A317C409D50051A177 /* GooglePlayMusic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GooglePlayMusic-Info.plist"; path = "GooglePlayMusic/GooglePlayMusic-Info.plist"; sourceTree = "<group>"; };
 		3F2275B817C40A830051A177 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		E64D87838E74DE2C38DE701B /* Pods-GooglePlayMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlayMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic.release.xcconfig"; sourceTree = "<group>"; };
+		E90605011A7200B200F64C22 /* SharingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharingManager.h; path = GooglePlayMusic/SharingManager.h; sourceTree = SOURCE_ROOT; };
+		E90605021A7200B200F64C22 /* SharingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SharingManager.m; path = GooglePlayMusic/SharingManager.m; sourceTree = SOURCE_ROOT; };
 		E93056CA1A705F7D0071A4A3 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "GooglePlayMusic/NSString+HTML.h"; sourceTree = SOURCE_ROOT; };
 		E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "GooglePlayMusic/NSString+HTML.m"; sourceTree = SOURCE_ROOT; };
 		E93056CD1A705F990071A4A3 /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleMediaKeyController.h; path = GooglePlayMusic/AppleMediaKeyController.h; sourceTree = SOURCE_ROOT; };
@@ -46,6 +53,9 @@
 		E9641EEC1A705E0C000C680C /* GooglePlayMusic-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GooglePlayMusic-Prefix.pch"; path = "GooglePlayMusic/GooglePlayMusic-Prefix.pch"; sourceTree = "<group>"; };
 		E99A79031A70747A000A9383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GooglePlayMusic/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		E99A79061A707481000A9383 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = GooglePlayMusic/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		E9AB40751A72158F003EB7A2 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utilities.h; path = GooglePlayMusic/Utilities.h; sourceTree = SOURCE_ROOT; };
+		E9AB40761A72158F003EB7A2 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utilities.m; path = GooglePlayMusic/Utilities.m; sourceTree = SOURCE_ROOT; };
+		FE037CDE0D220187CEE96931 /* libPods-GooglePlayMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GooglePlayMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,18 +67,29 @@
 				3F8305BF17CE7A4000727D3A /* ScriptingBridge.framework in Frameworks */,
 				3F2275B917C40A830051A177 /* WebKit.framework in Frameworks */,
 				3F22759C17C409D50051A177 /* Cocoa.framework in Frameworks */,
+				FFBECA3C72E0496317073FDE /* libPods-GooglePlayMusic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13E4B28694987836EE0211F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18D04518FF128EEB92EB5568 /* Pods-GooglePlayMusic.debug.xcconfig */,
+				E64D87838E74DE2C38DE701B /* Pods-GooglePlayMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3F22758F17C409D50051A177 = {
 			isa = PBXGroup;
 			children = (
 				3F2275A117C409D50051A177 /* GooglePlayMusic */,
 				3F22759A17C409D50051A177 /* Frameworks */,
 				3F22759917C409D50051A177 /* Products */,
+				13E4B28694987836EE0211F1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +108,7 @@
 				3F2275B817C40A830051A177 /* WebKit.framework */,
 				3F22759B17C409D50051A177 /* Cocoa.framework */,
 				3F22759D17C409D50051A177 /* Other Frameworks */,
+				FE037CDE0D220187CEE96931 /* libPods-GooglePlayMusic.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -113,6 +135,10 @@
 				E9641EDB1A705A77000C680C /* MediaKeyController */,
 				3F47C3791808BD6A0042DD62 /* Images */,
 				3F2275A217C409D50051A177 /* Supporting Files */,
+				E90605011A7200B200F64C22 /* SharingManager.h */,
+				E90605021A7200B200F64C22 /* SharingManager.m */,
+				E9AB40751A72158F003EB7A2 /* Utilities.h */,
+				E9AB40761A72158F003EB7A2 /* Utilities.m */,
 			);
 			name = GooglePlayMusic;
 			path = SonyMusicUnlimited;
@@ -164,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F2275B517C409D50051A177 /* Build configuration list for PBXNativeTarget "GooglePlayMusic" */;
 			buildPhases = (
+				A6ACF32BE7788F4890551088 /* Check Pods Manifest.lock */,
 				3F22759417C409D50051A177 /* Sources */,
 				3F22759517C409D50051A177 /* Frameworks */,
 				3F22759617C409D50051A177 /* Resources */,
+				C8357689C25E5CA835D2D45B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +245,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6ACF32BE7788F4890551088 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C8357689C25E5CA835D2D45B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F22759417C409D50051A177 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -226,6 +287,8 @@
 				E9641EDA1A705A24000C680C /* main.m in Sources */,
 				E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */,
 				E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */,
+				E90605031A7200B200F64C22 /* SharingManager.m in Sources */,
+				E9AB40771A72158F003EB7A2 /* Utilities.m in Sources */,
 				E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +374,7 @@
 		};
 		3F2275B617C409D50051A177 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18D04518FF128EEB92EB5568 /* Pods-GooglePlayMusic.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -323,6 +387,7 @@
 		};
 		3F2275B717C409D50051A177 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E64D87838E74DE2C38DE701B /* Pods-GooglePlayMusic.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

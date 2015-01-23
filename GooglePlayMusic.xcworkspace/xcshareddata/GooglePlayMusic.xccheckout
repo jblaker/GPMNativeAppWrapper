@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D441DAB8-E2AA-49BB-8E0E-7274D3AFC269</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GooglePlayMusic</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB64994CCEA00E9ACB052F177C1C2986E39DCA0B</key>
+		<string>github.com:jblaker/GPMNativeAppWrapper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GooglePlayMusic.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB64994CCEA00E9ACB052F177C1C2986E39DCA0B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jblaker/GPMNativeAppWrapper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB64994CCEA00E9ACB052F177C1C2986E39DCA0B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB64994CCEA00E9ACB052F177C1C2986E39DCA0B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GPMNativeAppWrapper</string>
+		</dict>
+	</array>
+</dict>
+</plist>
