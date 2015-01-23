@@ -166,6 +166,7 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   } else {
     if([self updateMenuItem:_trackNameMenuItem withTitle:[_trackName kv_decodeHTMLCharacterEntities]]){
       [self postNotification];
+      [self scrobbleNowPlaying];
     }
     [self updateMenuItem:_artistNameMenuItem withTitle:[_artistName kv_decodeHTMLCharacterEntities]];
     [self updateMenuItem:_nowPlayingMenuItem withTitle:@"Now Playing"];
