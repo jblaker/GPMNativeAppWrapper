@@ -1,366 +1,1046 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		3F22759C17C409D50051A177 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F22759B17C409D50051A177 /* Cocoa.framework */; };
-		3F2275B917C40A830051A177 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2275B817C40A830051A177 /* WebKit.framework */; };
-		3F47C3781808B9DE0042DD62 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F22759E17C409D50051A177 /* AppKit.framework */; };
-		3F8305BF17CE7A4000727D3A /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */; };
-		E90605031A7200B200F64C22 /* SharingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E90605021A7200B200F64C22 /* SharingManager.m */; };
-		E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */; };
-		E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CE1A705F990071A4A3 /* AppleMediaKeyController.m */; };
-		E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056D21A705FAB0071A4A3 /* AppDelegate.m */; };
-		E93056D61A705FC10071A4A3 /* GPMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056D51A705FC10071A4A3 /* GPMManager.m */; };
-		E9641EDA1A705A24000C680C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9641ED91A705A24000C680C /* main.m */; };
-		E9641EDF1A705CBB000C680C /* Google-Play-Music-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = E9641EDE1A705CBB000C680C /* Google-Play-Music-icon.icns */; };
-		E9641EE11A705D22000C680C /* Google-Play-Music-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E9641EE01A705D22000C680C /* Google-Play-Music-icon.png */; };
-		E99A79041A70747A000A9383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E99A79021A70747A000A9383 /* InfoPlist.strings */; };
-		E99A79071A707481000A9383 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E99A79051A707481000A9383 /* MainMenu.xib */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		3F22759817C409D50051A177 /* GooglePlayMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlayMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F22759B17C409D50051A177 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		3F22759E17C409D50051A177 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		3F22759F17C409D50051A177 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3F2275A017C409D50051A177 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		3F2275A317C409D50051A177 /* GooglePlayMusic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GooglePlayMusic-Info.plist"; path = "GooglePlayMusic/GooglePlayMusic-Info.plist"; sourceTree = "<group>"; };
-		3F2275B817C40A830051A177 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
-		E90605011A7200B200F64C22 /* SharingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingManager.h; sourceTree = SOURCE_ROOT; };
-		E90605021A7200B200F64C22 /* SharingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingManager.m; sourceTree = SOURCE_ROOT; };
-		E93056CA1A705F7D0071A4A3 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "GooglePlayMusic/NSString+HTML.h"; sourceTree = SOURCE_ROOT; };
-		E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "GooglePlayMusic/NSString+HTML.m"; sourceTree = SOURCE_ROOT; };
-		E93056CD1A705F990071A4A3 /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleMediaKeyController.h; path = GooglePlayMusic/AppleMediaKeyController.h; sourceTree = SOURCE_ROOT; };
-		E93056CE1A705F990071A4A3 /* AppleMediaKeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppleMediaKeyController.m; path = GooglePlayMusic/AppleMediaKeyController.m; sourceTree = SOURCE_ROOT; };
-		E93056CF1A705F990071A4A3 /* singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = singleton.h; path = GooglePlayMusic/singleton.h; sourceTree = SOURCE_ROOT; };
-		E93056D11A705FAB0071A4A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GooglePlayMusic/AppDelegate.h; sourceTree = SOURCE_ROOT; };
-		E93056D21A705FAB0071A4A3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GooglePlayMusic/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		E93056D41A705FC10071A4A3 /* GPMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPMManager.h; path = GooglePlayMusic/GPMManager.h; sourceTree = SOURCE_ROOT; };
-		E93056D51A705FC10071A4A3 /* GPMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPMManager.m; path = GooglePlayMusic/GPMManager.m; sourceTree = SOURCE_ROOT; };
-		E9641ED91A705A24000C680C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = GooglePlayMusic/main.m; sourceTree = SOURCE_ROOT; };
-		E9641EDE1A705CBB000C680C /* Google-Play-Music-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "Google-Play-Music-icon.icns"; sourceTree = SOURCE_ROOT; };
-		E9641EE01A705D22000C680C /* Google-Play-Music-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Google-Play-Music-icon.png"; path = "GooglePlayMusic/Google-Play-Music-icon.png"; sourceTree = SOURCE_ROOT; };
-		E9641EEC1A705E0C000C680C /* GooglePlayMusic-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "GooglePlayMusic-Prefix.pch"; path = "GooglePlayMusic/GooglePlayMusic-Prefix.pch"; sourceTree = "<group>"; };
-		E99A79031A70747A000A9383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = GooglePlayMusic/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		E99A79061A707481000A9383 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = GooglePlayMusic/en.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		3F22759517C409D50051A177 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F47C3781808B9DE0042DD62 /* AppKit.framework in Frameworks */,
-				3F8305BF17CE7A4000727D3A /* ScriptingBridge.framework in Frameworks */,
-				3F2275B917C40A830051A177 /* WebKit.framework in Frameworks */,
-				3F22759C17C409D50051A177 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		3F22758F17C409D50051A177 = {
-			isa = PBXGroup;
-			children = (
-				3F2275A117C409D50051A177 /* GooglePlayMusic */,
-				3F22759A17C409D50051A177 /* Frameworks */,
-				3F22759917C409D50051A177 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		3F22759917C409D50051A177 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3F22759817C409D50051A177 /* GooglePlayMusic.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3F22759A17C409D50051A177 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */,
-				3F2275B817C40A830051A177 /* WebKit.framework */,
-				3F22759B17C409D50051A177 /* Cocoa.framework */,
-				3F22759D17C409D50051A177 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3F22759D17C409D50051A177 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F22759E17C409D50051A177 /* AppKit.framework */,
-				3F22759F17C409D50051A177 /* CoreData.framework */,
-				3F2275A017C409D50051A177 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		3F2275A117C409D50051A177 /* GooglePlayMusic */ = {
-			isa = PBXGroup;
-			children = (
-				E93056D11A705FAB0071A4A3 /* AppDelegate.h */,
-				E93056D21A705FAB0071A4A3 /* AppDelegate.m */,
-				E93056D41A705FC10071A4A3 /* GPMManager.h */,
-				E93056D51A705FC10071A4A3 /* GPMManager.m */,
-				E99A79051A707481000A9383 /* MainMenu.xib */,
-				E9641EDC1A705A8B000C680C /* Categories */,
-				E9641EDB1A705A77000C680C /* MediaKeyController */,
-				3F47C3791808BD6A0042DD62 /* Images */,
-				3F2275A217C409D50051A177 /* Supporting Files */,
-				E90605011A7200B200F64C22 /* SharingManager.h */,
-				E90605021A7200B200F64C22 /* SharingManager.m */,
-			);
-			name = GooglePlayMusic;
-			path = SonyMusicUnlimited;
-			sourceTree = "<group>";
-		};
-		3F2275A217C409D50051A177 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E99A79021A70747A000A9383 /* InfoPlist.strings */,
-				E9641EEC1A705E0C000C680C /* GooglePlayMusic-Prefix.pch */,
-				E9641ED91A705A24000C680C /* main.m */,
-				3F2275A317C409D50051A177 /* GooglePlayMusic-Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3F47C3791808BD6A0042DD62 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				E9641EE01A705D22000C680C /* Google-Play-Music-icon.png */,
-				E9641EDE1A705CBB000C680C /* Google-Play-Music-icon.icns */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
-		E9641EDB1A705A77000C680C /* MediaKeyController */ = {
-			isa = PBXGroup;
-			children = (
-				E93056CD1A705F990071A4A3 /* AppleMediaKeyController.h */,
-				E93056CE1A705F990071A4A3 /* AppleMediaKeyController.m */,
-				E93056CF1A705F990071A4A3 /* singleton.h */,
-			);
-			name = MediaKeyController;
-			sourceTree = "<group>";
-		};
-		E9641EDC1A705A8B000C680C /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				E93056CA1A705F7D0071A4A3 /* NSString+HTML.h */,
-				E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */,
-			);
-			name = Categories;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		3F22759717C409D50051A177 /* GooglePlayMusic */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F2275B517C409D50051A177 /* Build configuration list for PBXNativeTarget "GooglePlayMusic" */;
-			buildPhases = (
-				3F22759417C409D50051A177 /* Sources */,
-				3F22759517C409D50051A177 /* Frameworks */,
-				3F22759617C409D50051A177 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GooglePlayMusic;
-			productName = SonyMusicUnlimited;
-			productReference = 3F22759817C409D50051A177 /* GooglePlayMusic.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		3F22759017C409D50051A177 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = blakerdesign;
-			};
-			buildConfigurationList = 3F22759317C409D50051A177 /* Build configuration list for PBXProject "GooglePlayMusic" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 3F22758F17C409D50051A177;
-			productRefGroup = 3F22759917C409D50051A177 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				3F22759717C409D50051A177 /* GooglePlayMusic */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		3F22759617C409D50051A177 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9641EE11A705D22000C680C /* Google-Play-Music-icon.png in Resources */,
-				E99A79041A70747A000A9383 /* InfoPlist.strings in Resources */,
-				E9641EDF1A705CBB000C680C /* Google-Play-Music-icon.icns in Resources */,
-				E99A79071A707481000A9383 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		3F22759417C409D50051A177 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E93056D61A705FC10071A4A3 /* GPMManager.m in Sources */,
-				E9641EDA1A705A24000C680C /* main.m in Sources */,
-				E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */,
-				E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */,
-				E90605031A7200B200F64C22 /* SharingManager.m in Sources */,
-				E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E99A79021A70747A000A9383 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E99A79031A70747A000A9383 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E99A79051A707481000A9383 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E99A79061A707481000A9383 /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		3F2275B317C409D50051A177 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		3F2275B417C409D50051A177 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		3F2275B617C409D50051A177 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GooglePlayMusic/GooglePlayMusic-Prefix.pch";
-				INFOPLIST_FILE = "GooglePlayMusic/GooglePlayMusic-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		3F2275B717C409D50051A177 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GooglePlayMusic/GooglePlayMusic-Prefix.pch";
-				INFOPLIST_FILE = "GooglePlayMusic/GooglePlayMusic-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		3F22759317C409D50051A177 /* Build configuration list for PBXProject "GooglePlayMusic" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F2275B317C409D50051A177 /* Debug */,
-				3F2275B417C409D50051A177 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3F2275B517C409D50051A177 /* Build configuration list for PBXNativeTarget "GooglePlayMusic" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F2275B617C409D50051A177 /* Debug */,
-				3F2275B717C409D50051A177 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 3F22759017C409D50051A177 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>13E4B28694987836EE0211F1</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>18D04518FF128EEB92EB5568</string>
+				<string>E64D87838E74DE2C38DE701B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>18D04518FF128EEB92EB5568</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-GooglePlayMusic.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F22758F17C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3F2275A117C409D50051A177</string>
+				<string>3F22759A17C409D50051A177</string>
+				<string>3F22759917C409D50051A177</string>
+				<string>13E4B28694987836EE0211F1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F22759017C409D50051A177</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>blakerdesign</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>3F22759317C409D50051A177</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>3F22758F17C409D50051A177</string>
+			<key>productRefGroup</key>
+			<string>3F22759917C409D50051A177</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>3F22759717C409D50051A177</string>
+			</array>
+		</dict>
+		<key>3F22759317C409D50051A177</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3F2275B317C409D50051A177</string>
+				<string>3F2275B417C409D50051A177</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3F22759417C409D50051A177</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E93056D61A705FC10071A4A3</string>
+				<string>E9641EDA1A705A24000C680C</string>
+				<string>E93056CC1A705F7D0071A4A3</string>
+				<string>E93056D01A705F990071A4A3</string>
+				<string>E90605031A7200B200F64C22</string>
+				<string>E93056D31A705FAB0071A4A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3F22759517C409D50051A177</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3F47C3781808B9DE0042DD62</string>
+				<string>3F8305BF17CE7A4000727D3A</string>
+				<string>3F2275B917C40A830051A177</string>
+				<string>3F22759C17C409D50051A177</string>
+				<string>FFBECA3C72E0496317073FDE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3F22759617C409D50051A177</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E9641EE11A705D22000C680C</string>
+				<string>E99A79041A70747A000A9383</string>
+				<string>E9641EDF1A705CBB000C680C</string>
+				<string>E99A79071A707481000A9383</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3F22759717C409D50051A177</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3F2275B517C409D50051A177</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A6ACF32BE7788F4890551088</string>
+				<string>3F22759417C409D50051A177</string>
+				<string>3F22759517C409D50051A177</string>
+				<string>3F22759617C409D50051A177</string>
+				<string>C8357689C25E5CA835D2D45B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>GooglePlayMusic</string>
+			<key>productName</key>
+			<string>SonyMusicUnlimited</string>
+			<key>productReference</key>
+			<string>3F22759817C409D50051A177</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>3F22759817C409D50051A177</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>GooglePlayMusic.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>3F22759917C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3F22759817C409D50051A177</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F22759A17C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3F8305BE17CE7A4000727D3A</string>
+				<string>3F2275B817C40A830051A177</string>
+				<string>3F22759B17C409D50051A177</string>
+				<string>3F22759D17C409D50051A177</string>
+				<string>FE037CDE0D220187CEE96931</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F22759B17C409D50051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Cocoa.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Cocoa.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F22759C17C409D50051A177</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F22759B17C409D50051A177</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3F22759D17C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3F22759E17C409D50051A177</string>
+				<string>3F22759F17C409D50051A177</string>
+				<string>3F2275A017C409D50051A177</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Other Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F22759E17C409D50051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>AppKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/AppKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F22759F17C409D50051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreData.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreData.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F2275A017C409D50051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F2275A117C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E93056D11A705FAB0071A4A3</string>
+				<string>E93056D21A705FAB0071A4A3</string>
+				<string>E93056D41A705FC10071A4A3</string>
+				<string>E93056D51A705FC10071A4A3</string>
+				<string>E99A79051A707481000A9383</string>
+				<string>E9641EDC1A705A8B000C680C</string>
+				<string>E9641EDB1A705A77000C680C</string>
+				<string>3F47C3791808BD6A0042DD62</string>
+				<string>3F2275A217C409D50051A177</string>
+				<string>E90605011A7200B200F64C22</string>
+				<string>E90605021A7200B200F64C22</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>GooglePlayMusic</string>
+			<key>path</key>
+			<string>SonyMusicUnlimited</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F2275A217C409D50051A177</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E99A79021A70747A000A9383</string>
+				<string>E9641EEC1A705E0C000C680C</string>
+				<string>E9641ED91A705A24000C680C</string>
+				<string>3F2275A317C409D50051A177</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F2275A317C409D50051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist</string>
+			<key>name</key>
+			<string>GooglePlayMusic-Info.plist</string>
+			<key>path</key>
+			<string>GooglePlayMusic/GooglePlayMusic-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F2275B317C409D50051A177</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>3F2275B417C409D50051A177</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_ENABLE_OBJC_EXCEPTIONS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>MACOSX_DEPLOYMENT_TARGET</key>
+				<string>10.8</string>
+				<key>SDKROOT</key>
+				<string>macosx</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3F2275B517C409D50051A177</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3F2275B617C409D50051A177</string>
+				<string>3F2275B717C409D50051A177</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3F2275B617C409D50051A177</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>18D04518FF128EEB92EB5568</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>GooglePlayMusic/GooglePlayMusic-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>GooglePlayMusic/GooglePlayMusic-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>3F2275B717C409D50051A177</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E64D87838E74DE2C38DE701B</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>COMBINE_HIDPI_IMAGES</key>
+				<string>YES</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>GooglePlayMusic/GooglePlayMusic-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>GooglePlayMusic/GooglePlayMusic-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3F2275B817C40A830051A177</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>WebKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/WebKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F2275B917C40A830051A177</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F2275B817C40A830051A177</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3F47C3781808B9DE0042DD62</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F22759E17C409D50051A177</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3F47C3791808BD6A0042DD62</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E9641EE01A705D22000C680C</string>
+				<string>E9641EDE1A705CBB000C680C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Images</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3F8305BE17CE7A4000727D3A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>ScriptingBridge.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/ScriptingBridge.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>3F8305BF17CE7A4000727D3A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3F8305BE17CE7A4000727D3A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A6ACF32BE7788F4890551088</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C8357689C25E5CA835D2D45B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>E64D87838E74DE2C38DE701B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-GooglePlayMusic.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-GooglePlayMusic/Pods-GooglePlayMusic.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E90605011A7200B200F64C22</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SharingManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E90605021A7200B200F64C22</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SharingManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E90605031A7200B200F64C22</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E90605021A7200B200F64C22</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E93056CA1A705F7D0071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSString+HTML.h</string>
+			<key>path</key>
+			<string>GooglePlayMusic/NSString+HTML.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056CB1A705F7D0071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSString+HTML.m</string>
+			<key>path</key>
+			<string>GooglePlayMusic/NSString+HTML.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056CC1A705F7D0071A4A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E93056CB1A705F7D0071A4A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E93056CD1A705F990071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AppleMediaKeyController.h</string>
+			<key>path</key>
+			<string>GooglePlayMusic/AppleMediaKeyController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056CE1A705F990071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AppleMediaKeyController.m</string>
+			<key>path</key>
+			<string>GooglePlayMusic/AppleMediaKeyController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056CF1A705F990071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>singleton.h</string>
+			<key>path</key>
+			<string>GooglePlayMusic/singleton.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056D01A705F990071A4A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E93056CE1A705F990071A4A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E93056D11A705FAB0071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AppDelegate.h</string>
+			<key>path</key>
+			<string>GooglePlayMusic/AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056D21A705FAB0071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AppDelegate.m</string>
+			<key>path</key>
+			<string>GooglePlayMusic/AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056D31A705FAB0071A4A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E93056D21A705FAB0071A4A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E93056D41A705FC10071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GPMManager.h</string>
+			<key>path</key>
+			<string>GooglePlayMusic/GPMManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056D51A705FC10071A4A3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>GPMManager.m</string>
+			<key>path</key>
+			<string>GooglePlayMusic/GPMManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E93056D61A705FC10071A4A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E93056D51A705FC10071A4A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9641ED91A705A24000C680C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>main.m</string>
+			<key>path</key>
+			<string>GooglePlayMusic/main.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E9641EDA1A705A24000C680C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E9641ED91A705A24000C680C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9641EDB1A705A77000C680C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E93056CD1A705F990071A4A3</string>
+				<string>E93056CE1A705F990071A4A3</string>
+				<string>E93056CF1A705F990071A4A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MediaKeyController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E9641EDC1A705A8B000C680C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E93056CA1A705F7D0071A4A3</string>
+				<string>E93056CB1A705F7D0071A4A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Categories</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E9641EDE1A705CBB000C680C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.icns</string>
+			<key>path</key>
+			<string>Google-Play-Music-icon.icns</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E9641EDF1A705CBB000C680C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E9641EDE1A705CBB000C680C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9641EE01A705D22000C680C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>name</key>
+			<string>Google-Play-Music-icon.png</string>
+			<key>path</key>
+			<string>GooglePlayMusic/Google-Play-Music-icon.png</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E9641EE11A705D22000C680C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E9641EE01A705D22000C680C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9641EEC1A705E0C000C680C</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>GooglePlayMusic-Prefix.pch</string>
+			<key>path</key>
+			<string>GooglePlayMusic/GooglePlayMusic-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E99A79021A70747A000A9383</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E99A79031A70747A000A9383</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E99A79031A70747A000A9383</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>GooglePlayMusic/en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E99A79041A70747A000A9383</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E99A79021A70747A000A9383</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E99A79051A707481000A9383</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E99A79061A707481000A9383</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E99A79061A707481000A9383</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>GooglePlayMusic/en.lproj/MainMenu.xib</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E99A79071A707481000A9383</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E99A79051A707481000A9383</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FE037CDE0D220187CEE96931</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-GooglePlayMusic.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>FFBECA3C72E0496317073FDE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE037CDE0D220187CEE96931</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>3F22759017C409D50051A177</string>
+</dict>
+</plist>
