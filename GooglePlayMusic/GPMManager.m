@@ -28,14 +28,8 @@ NSString *const albumArtId = @"playingAlbumArt";
   NSMenuItem *_likeTrackMenuItem;
   NSMenuItem *_dislikeTrackMenuItem;
   NSMenuItem *_updateStatusMessageMenuItem;
-  NSStatusItem *_playbackToggleStatusItem;
-  NSStatusItem *_nextTrackStatusItem;
   NSMenu *_dockMenu;
-  BOOL _isPlaying;
   int _previousTimeStamp;
-  NSString *_trackName;
-  NSString *_artistName;
-  NSString *_albumName;
 }
 
 @end
@@ -74,20 +68,6 @@ NSString *const albumArtId = @"playingAlbumArt";
   
   [NSTimer scheduledTimerWithTimeInterval:1.01 target:self selector:@selector(displayNowPlaying) userInfo:nil repeats:YES];
   
-}
-
-- (void)buildStatusBarItems {
-  NSStatusBar *bar = [NSStatusBar systemStatusBar];
-  
-  _nextTrackStatusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-  [_nextTrackStatusItem setImage:[NSImage imageNamed:@"Icon_Skip"]];
-  [_nextTrackStatusItem setHighlightMode:YES];
-  [_nextTrackStatusItem setAction:@selector(nextTrackFromStatusBar:)];
-  
-  _playbackToggleStatusItem = [bar statusItemWithLength:NSVariableStatusItemLength];
-  [_playbackToggleStatusItem setImage:[NSImage imageNamed:@"Icon_Play"]];
-  [_playbackToggleStatusItem setHighlightMode:YES];
-  [_playbackToggleStatusItem setAction:@selector(togglePlaybackFromStatusBar:)];
 }
 
 // This delegate method gets triggered every time the page loads, but before the JavaScript runs
@@ -144,8 +124,6 @@ NSString *const albumArtId = @"playingAlbumArt";
   [_nextTrackMenuItem setEnabled:b];
   [_likeTrackMenuItem setEnabled:b];
   [_dislikeTrackMenuItem setEnabled:b];
-  [_playbackToggleStatusItem setEnabled:b];
-  [_nextTrackStatusItem setEnabled:b];
 }
 
 - (void)displayNowPlaying {

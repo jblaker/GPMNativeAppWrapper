@@ -12,6 +12,7 @@
 @interface GPMManager : NSObject
 
 + (GPMManager *)sharedInstance;
+
 - (void)setup;
 - (void)togglePlayback;
 - (void)previousTrack;
@@ -19,6 +20,9 @@
 - (void)likeTrack;
 - (void)dislikeTrack;
 
-@property (strong) NSStatusItem *nextTrackStatusItem;
+@property (nonatomic, strong) NSString *trackName;
+@property (nonatomic, strong) NSString *artistName;
+@property (nonatomic, strong) NSString *albumName;
+@property (nonatomic, assign) BOOL isPlaying;
 
 @end

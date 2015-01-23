@@ -73,6 +73,25 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Sharing" id="zYB-pK-Gu1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Sharing" id="PaR-2L-41i">
+                        <items>
+                            <menuItem title="Twitter" id="mim-SS-F8a">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="shareViaTwitter:" target="szt-lM-aON" id="2hO-F2-UhB"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Scrobble to Last.fm" id="cQC-5p-M0e">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="toggleScrobbling:" target="szt-lM-aON" id="XQt-KT-7Pj"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="View" id="O5X-cH-PnV">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" id="5cH-S0-Bw9">
@@ -88,6 +107,23 @@
                 </menuItem>
             </items>
         </menu>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="artistNameMenuItem" destination="757" id="760"/>
+                <outlet property="dislikeTrackMenuItem" destination="580" id="762"/>
+                <outlet property="dockMenu" destination="570" id="758"/>
+                <outlet property="likeTrackMenuItem" destination="579" id="763"/>
+                <outlet property="nextTrackMenuItem" destination="573" id="764"/>
+                <outlet property="nowPlayingMenuItem" destination="619" id="689"/>
+                <outlet property="playbackToggleMenuItem" destination="571" id="761"/>
+                <outlet property="previousTrackMenuItem" destination="572" id="765"/>
+                <outlet property="trackNameMenuItem" destination="756" id="759"/>
+                <outlet property="webView" destination="536" id="659"/>
+                <outlet property="window" destination="371" id="532"/>
+            </connections>
+        </customObject>
+        <customObject id="420" userLabel="NSFontManager" customClass="NSFontManager"/>
+        <customObject id="szt-lM-aON" customClass="SharingManager"/>
         <window title="Google Play Music" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
@@ -115,21 +151,5 @@
                 </constraints>
             </view>
         </window>
-        <customObject id="494" customClass="AppDelegate">
-            <connections>
-                <outlet property="artistNameMenuItem" destination="757" id="760"/>
-                <outlet property="dislikeTrackMenuItem" destination="580" id="762"/>
-                <outlet property="dockMenu" destination="570" id="758"/>
-                <outlet property="likeTrackMenuItem" destination="579" id="763"/>
-                <outlet property="nextTrackMenuItem" destination="573" id="764"/>
-                <outlet property="nowPlayingMenuItem" destination="619" id="689"/>
-                <outlet property="playbackToggleMenuItem" destination="571" id="761"/>
-                <outlet property="previousTrackMenuItem" destination="572" id="765"/>
-                <outlet property="trackNameMenuItem" destination="756" id="759"/>
-                <outlet property="webView" destination="536" id="659"/>
-                <outlet property="window" destination="371" id="532"/>
-            </connections>
-        </customObject>
-        <customObject id="420" userLabel="NSFontManager" customClass="NSFontManager"/>
     </objects>
 </document>

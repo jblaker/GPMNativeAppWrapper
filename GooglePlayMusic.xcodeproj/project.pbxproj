@@ -11,6 +11,7 @@
 		3F2275B917C40A830051A177 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2275B817C40A830051A177 /* WebKit.framework */; };
 		3F47C3781808B9DE0042DD62 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F22759E17C409D50051A177 /* AppKit.framework */; };
 		3F8305BF17CE7A4000727D3A /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */; };
+		E90605031A7200B200F64C22 /* SharingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E90605021A7200B200F64C22 /* SharingManager.m */; };
 		E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */; };
 		E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056CE1A705F990071A4A3 /* AppleMediaKeyController.m */; };
 		E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E93056D21A705FAB0071A4A3 /* AppDelegate.m */; };
@@ -31,6 +32,8 @@
 		3F2275A317C409D50051A177 /* GooglePlayMusic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GooglePlayMusic-Info.plist"; path = "GooglePlayMusic/GooglePlayMusic-Info.plist"; sourceTree = "<group>"; };
 		3F2275B817C40A830051A177 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3F8305BE17CE7A4000727D3A /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		E90605011A7200B200F64C22 /* SharingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharingManager.h; sourceTree = SOURCE_ROOT; };
+		E90605021A7200B200F64C22 /* SharingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharingManager.m; sourceTree = SOURCE_ROOT; };
 		E93056CA1A705F7D0071A4A3 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+HTML.h"; path = "GooglePlayMusic/NSString+HTML.h"; sourceTree = SOURCE_ROOT; };
 		E93056CB1A705F7D0071A4A3 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+HTML.m"; path = "GooglePlayMusic/NSString+HTML.m"; sourceTree = SOURCE_ROOT; };
 		E93056CD1A705F990071A4A3 /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppleMediaKeyController.h; path = GooglePlayMusic/AppleMediaKeyController.h; sourceTree = SOURCE_ROOT; };
@@ -113,6 +116,8 @@
 				E9641EDB1A705A77000C680C /* MediaKeyController */,
 				3F47C3791808BD6A0042DD62 /* Images */,
 				3F2275A217C409D50051A177 /* Supporting Files */,
+				E90605011A7200B200F64C22 /* SharingManager.h */,
+				E90605021A7200B200F64C22 /* SharingManager.m */,
 			);
 			name = GooglePlayMusic;
 			path = SonyMusicUnlimited;
@@ -226,6 +231,7 @@
 				E9641EDA1A705A24000C680C /* main.m in Sources */,
 				E93056CC1A705F7D0071A4A3 /* NSString+HTML.m in Sources */,
 				E93056D01A705F990071A4A3 /* AppleMediaKeyController.m in Sources */,
+				E90605031A7200B200F64C22 /* SharingManager.m in Sources */,
 				E93056D31A705FAB0071A4A3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
