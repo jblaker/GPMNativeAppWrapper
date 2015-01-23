@@ -75,6 +75,7 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   [self shouldEnableMenuItems:NO];
   
   [NSTimer scheduledTimerWithTimeInterval:1.01 target:self selector:@selector(displayNowPlaying) userInfo:nil repeats:YES];
+  [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(scrobbleNowPlaying) userInfo:nil repeats:YES];
   
 }
 
@@ -162,7 +163,6 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   } else {
     if([self updateMenuItem:_trackNameMenuItem withTitle:[_trackName kv_decodeHTMLCharacterEntities]]){
       [self postNotification];
-      [self scrobbleNowPlaying];
     }
     [self updateMenuItem:_artistNameMenuItem withTitle:[_artistName kv_decodeHTMLCharacterEntities]];
     [self updateMenuItem:_nowPlayingMenuItem withTitle:@"Now Playing"];
@@ -213,11 +213,15 @@ NSString *const kPlayPauseButtonId = @"play-pause";
 }
 
 - (void)scrobbleNowPlaying {
-  dispatch_queue_t scrobbleQueue = dispatch_queue_create("com.blakerdesign.scrobble", NULL);
   
-  dispatch_async(scrobbleQueue, ^{
-    [SharingManager scrobbleNowPlayingTrack:_trackName byArtist:_artistName];
-  });
+  if(_isPlaying) {
+    dispatch_queue_t scrobbleQueue = dispatch_queue_create("com.blakerdesign.scrobble", NULL);
+    
+    dispatch_async(scrobbleQueue, ^{
+      [SharingManager scrobbleNowPlayingTrack:_trackName byArtist:_artistName];
+    });
+  }
+  
 }
 
 - (void)scrobbleLastPlayed {
