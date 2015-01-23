@@ -11,11 +11,15 @@
 
 @implementation SharingManager
 
++ (instancetype)hiddenAlloc {
+  return [super alloc];
+}
+
 + (instancetype)sharedManager {
   static SharingManager *sharedManager = nil;
   static dispatch_once_t onceToken;
   dispatch_once(&onceToken, ^{
-    sharedManager = [SharingManager new];
+    sharedManager = [SharingManager hiddenAlloc];
   });
   return sharedManager;
 }
@@ -30,7 +34,8 @@
   
   if(manager.isPlaying == NO) { return; }
     
-  NSString *sharingText = [NSString stringWithFormat:@"♫ Listening to %@ by %@ ♫", manager.trackName, manager.artistName];
+  NSString *sharingText = [NSString stringWithFormat:@"Listening to %@ by %@", manager.trackName, manager.artistName];
+  sharingText = [sharingText stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
   NSString *sharingURL = [NSString stringWithFormat:@"https://twitter.com/intent/tweet?text=%@", sharingText];
   
   [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:sharingURL]];
