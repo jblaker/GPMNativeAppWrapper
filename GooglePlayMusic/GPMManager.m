@@ -38,6 +38,8 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   NSString *_trackDurationString;
   NSString *_lastAristName;
   NSString *_lastTrackName;
+  NSString *_lastDurationString;
+  NSString *_lastCurrentTimeString;
 }
 
 @end
@@ -138,7 +140,8 @@ NSString *const kPlayPauseButtonId = @"play-pause";
 - (void)setupForNextTrack {
   _lastAristName = _artistName ? _artistName : [self innerHTMLForElementWithID:kArtistID];
   _lastTrackName = _trackName ? _trackName : [self innerHTMLForElementWithID:kTrackTitleID];
-  _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
+  _lastCurrentTimeString = _currentTimeString ? _currentTimeString : [self innerHTMLForElementWithID:kCurrentTimeId];
+  _lastDurationString = _trackDurationString ? _trackDurationString : [self innerHTMLForElementWithID:kDurationTimeId];
   [self scrobbleLastPlayed];
   _previousTimeStamp = 0;
 }
@@ -173,6 +176,7 @@ NSString *const kPlayPauseButtonId = @"play-pause";
       _isPlaying = YES;
     }
     
+    _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
     _currentTimeString = [self innerHTMLForElementWithID:kCurrentTimeId];
     int currentTimeStamp = [[_currentTimeString stringByReplacingOccurrencesOfString:@":" withString:@""] intValue];
     if ( currentTimeStamp > _previousTimeStamp ) {
@@ -226,25 +230,25 @@ NSString *const kPlayPauseButtonId = @"play-pause";
 
 - (void)scrobbleLastPlayed {
   
+  if([_lastDurationString isEqualToString:@""] || [_lastCurrentTimeString isEqualToString:@""]) { return; }
+  
   dispatch_queue_t scrobbleQueue = dispatch_queue_create("com.blakerdesign.scrobble", NULL);
   
   dispatch_async(scrobbleQueue, ^{
-  
+    
     // Is track longer than 30 seconds?
-    NSArray *currentTimeComponents = [_currentTimeString componentsSeparatedByString:@":"];
+    NSArray *currentTimeComponents = [_lastCurrentTimeString componentsSeparatedByString:@":"];
     
     if(currentTimeComponents == nil) { return; }
     
-    int playedSeconds = [currentTimeComponents[1] intValue];
+    // Multiply minutes by 60 to get total seconds of minutes and add to playedSeconds
+    int totalSecondsPlayed = ([currentTimeComponents[0] intValue] * 60) + [currentTimeComponents[1] intValue];
     
-    if(playedSeconds < 30) { return; }
+    if(totalSecondsPlayed < 30) { return; }
     
     // Did track play for more than half it's length
-    NSArray *durationComponents = [_trackDurationString componentsSeparatedByString:@":"];
+    NSArray *durationComponents = [_lastDurationString componentsSeparatedByString:@":"];
     int totalDurationSeconds = ([durationComponents[0] intValue] * 60) + [durationComponents[1] intValue];
-    
-    // Multiply minutes by 60 to get total seconds of minutes and add to playedSeconds
-    int totalSecondsPlayed = ([currentTimeComponents[0] intValue] * 60) + playedSeconds;
     
     float percentageOfTrackPlayed = (float)totalSecondsPlayed / (float)totalDurationSeconds;
     

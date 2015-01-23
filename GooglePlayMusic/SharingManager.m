@@ -76,7 +76,7 @@ NSString *const kScrobbilngEnabledKey = @"ScrobblingIsEnabledKey";
     [defaults setBool:NO forKey:kScrobbilngEnabledKey];
     [defaults setObject:nil forKey:kSessionKey];
     [defaults synchronize];
-    [_scrobbleShareMenuItem setEnabled:NO];
+    [_scrobbleShareMenuItem setState:0];
     return;
   }
   
