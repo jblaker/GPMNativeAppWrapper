@@ -36,6 +36,8 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   int _previousTimeStamp;
   NSString *_currentTimeString;
   NSString *_trackDurationString;
+  NSString *_lastAristName;
+  NSString *_lastTrackName;
 }
 
 @end
@@ -132,13 +134,19 @@ NSString *const kPlayPauseButtonId = @"play-pause";
   [_dislikeTrackMenuItem setEnabled:b];
 }
 
+- (void)setupForNextTrack {
+  _lastAristName = _artistName;
+  _lastTrackName = _trackName;
+  _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
+  [self scrobbleLastPlayed];
+  _previousTimeStamp = 0;
+}
+
 - (void)displayNowPlaying {
   
   NSString *currentTrackName = [self innerHTMLForElementWithID:kTrackTitleID];
   if (![currentTrackName isEqualToString:_trackName] ) {
-    _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
-    [self scrobbleLastPlayed];
-    _previousTimeStamp = 0;
+    [self setupForNextTrack];
   }
   _trackName = currentTrackName;
   _artistName = [self innerHTMLForElementWithID:kArtistID];
@@ -225,7 +233,7 @@ NSString *const kPlayPauseButtonId = @"play-pause";
     
     int playedSeconds = [currentTimeComponents[1] intValue];
     
-    //if(playedSeconds < 30) { return; }
+    if(playedSeconds < 30) { return; }
     
     // Did track play for more than half it's length
     NSArray *durationComponents = [_trackDurationString componentsSeparatedByString:@":"];
@@ -237,7 +245,7 @@ NSString *const kPlayPauseButtonId = @"play-pause";
     float percentageOfTrackPlayed = (float)totalSecondsPlayed / (float)totalDurationSeconds;
     
     if(percentageOfTrackPlayed >= 0.5) {
-      [SharingManager scrobblePlayedTrack:_trackName byArtist:_artistName];
+      [SharingManager scrobblePlayedTrack:_lastTrackName byArtist:_lastAristName];
     }
       
   });

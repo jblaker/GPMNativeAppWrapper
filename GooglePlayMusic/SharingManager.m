@@ -16,6 +16,7 @@ NSString *const kScrobbleApiSecret = @"";
 NSString *const kTwitterShareUrl = @"https://twitter.com/intent/tweet";
 NSString *const kSessionKey = @"AuthenticatedSessionKey";
 NSString *const kScrobbilngEnabledKey = @"ScrobblingIsEnabledKey";
+//NSString *const kLastFmUsernameKey = @"LastFmUsername";
 
 @interface SharingManager ()
 
@@ -58,7 +59,7 @@ NSString *const kScrobbilngEnabledKey = @"ScrobblingIsEnabledKey";
   
   if(manager.isPlaying == NO) { return; }
     
-  NSString *sharingText = [NSString stringWithFormat:@"Listening to %@ by %@", manager.trackName, manager.artistName];
+  NSString *sharingText = [NSString stringWithFormat:@"I'm listening to %@ by %@", manager.trackName, manager.artistName];
   sharingText = [sharingText stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
   NSString *sharingURL = [NSString stringWithFormat:@"%@?text=%@", kTwitterShareUrl, sharingText];
   
@@ -191,7 +192,7 @@ NSString *const kScrobbilngEnabledKey = @"ScrobblingIsEnabledKey";
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   
-  NSString *preMD5ApiSig = [NSString stringWithFormat:@"api_key%@artist%@methodtrack.scrobblek%@timestamp%@track%@%@", kScrobbleApiKey, artistName, [defaults objectForKey:kSessionKey], [NSNumber numberWithLong:timestamp], trackName, kScrobbleApiSecret];
+  NSString *preMD5ApiSig = [NSString stringWithFormat:@"api_key%@artist%@methodtrack.scrobblesk%@timestamp%@track%@%@", kScrobbleApiKey, artistName, [defaults objectForKey:kSessionKey], [NSNumber numberWithLong:timestamp], trackName, kScrobbleApiSecret];
   
   NSDictionary *postBody = @{@"method": @"track.scrobble",
                              @"artist": artistName,
