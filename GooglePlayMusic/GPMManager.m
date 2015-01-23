@@ -135,8 +135,8 @@ NSString *const kPlayPauseButtonId = @"play-pause";
 }
 
 - (void)setupForNextTrack {
-  _lastAristName = _artistName;
-  _lastTrackName = _trackName;
+  _lastAristName = _artistName ? _artistName : [self innerHTMLForElementWithID:kArtistID];
+  _lastTrackName = _trackName ? _trackName : [self innerHTMLForElementWithID:kTrackTitleID];
   _trackDurationString = [self innerHTMLForElementWithID:kDurationTimeId];
   [self scrobbleLastPlayed];
   _previousTimeStamp = 0;
